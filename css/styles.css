@@ -1,3 +1,55 @@
 h1 {
     font-size: 8em;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Work sans;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* MENÚ */
+
+.menu a {
+    position: absolute;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #1009e5;
+    /* background-color: #f0f0f0; */
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.menu .merchan {
+    top: 10px;
+    left: 10px;
+}
+
+.menu .noticias {
+    top: 10px;
+    right: 10px;
+}
+
+.menu .novedades {
+    bottom: 10px;
+    left: 10px;
+}
+
+.menu .escucha {
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Efecto hover
+.menu a:hover {
+    background-color: #555;
+} */
