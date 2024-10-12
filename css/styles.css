@@ -1,34 +1,3 @@
 h1 {
     font-size: 8em;
 }
-
-#camiseta {
-    cursor: move;
-}
-
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Para que no haya scroll si las imágenes se salen del viewport */
-}
-
-.container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-
-img {
-    width: 150px;
-    height: auto;
-    position: absolute; /* Las imágenes pueden moverse por toda la página */
-    cursor: grab;
-    transition: transform 0.2s;
-}
-
-img:active {
-    cursor: grabbing;
-}
