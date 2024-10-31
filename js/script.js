@@ -31,3 +31,11 @@ document.addEventListener('mousemove', (event) => {
     }
 });
 
+
+// texto que se redacta 
+var typed = new Typed('#element', {
+    strings: ['texto 1', 'texto 2'],
+    typeSpeed: 60,
+    loop: true,
+  });
+
