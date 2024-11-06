@@ -54,9 +54,15 @@ floatingImgs.forEach((img) => {
 
 
 // texto que se redacta 
-var typed = new Typed('#element', {
-    strings: ['texto 1', 'texto 2'],
-    typeSpeed: 60,
+var typed = new Typed('#element-1', {
+    strings: ['AMAIA'],
+    typeSpeed: 80,
+    loop: true,
+  });
+
+  var typed = new Typed('#element-2', {
+    strings: ['NUEVO','ALBUM'],
+    typeSpeed: 80,
     loop: true,
   });
 

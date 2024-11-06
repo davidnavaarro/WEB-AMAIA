@@ -41,7 +41,7 @@ body {
     align-items: center;
     width: 100%;
 }
-h1 {
+#element-1, #element-2 {
     z-index: 1; /* Asegura que el título esté por encima del video */
     position: relative; /* Necesario para que el z-index funcione */
     font-size: 3em;
