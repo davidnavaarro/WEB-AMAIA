@@ -51,11 +51,27 @@ floatingImgs.forEach((img) => {
     });
 });
 
+// texto que se redacta 
+var typed = new Typed('#element-1', {
+    strings: ['AMAIA'],
+    typeSpeed: 80,
+    loop: true,
+    showCursor: false,
+  });
+
+  var typed = new Typed('#element-2', {
+    strings: ['NUEVO','ALBUM'],
+    typeSpeed: 80,
+    loop: true,
+    showCursor: false,
+  });
+
+
 $(document).ready(function() {
     // Abre el modal automáticamente después de 2 segundos
     setTimeout(function() {
         $('#newsletterModal').modal('show');
-    }, 2000);
+    }, 2000);    
 
     // Simulación de suscripción
     $('#subscribeForm').on('submit', function(event) {
@@ -66,23 +82,10 @@ $(document).ready(function() {
             $('#newsletterModal').modal('hide'); 
         } else {
             alert("Por favor, ingresa un correo electrónico válido.");
-        }
-    });
-});
+        }    
+    });    
+});    
 
-
-// texto que se redacta 
-var typed = new Typed('#element-1', {
-    strings: ['AMAIA'],
-    typeSpeed: 80,
-    loop: true,
-  });
-
-  var typed = new Typed('#element-2', {
-    strings: ['NUEVO','ALBUM'],
-    typeSpeed: 80,
-    loop: true,
-  });
 
 
   

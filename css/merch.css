@@ -52,3 +52,7 @@ img.rounded {
     position: absolute; /* Cambia a absoluto para permitir que se mueva libremente */
     z-index: 10;        /* Hace que la imagen se ubique por encima de los otros elementos */
 }
+
+.col-6 img {
+    width: 100%;
+}
