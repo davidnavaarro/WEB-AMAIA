@@ -5,13 +5,14 @@ body, html {
     height: 100%;
     overflow: hidden;
     font-family: Arial, sans-serif;
+    background-image: url(.../media/img/amaia-merch.png);
 }
 
 .container {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,3 +23,13 @@ img.floating-img {
     width: 200px;
     transition: transform 0.1s ease;
 }
+
+
+.seccion-fondo {
+    background-image: url(../media/img/amaia-merch.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ajusta la altura de la sección */
+  }
+  
