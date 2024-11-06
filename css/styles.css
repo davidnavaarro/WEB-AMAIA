@@ -73,6 +73,16 @@ h1 {
     right: 10px;
 }
 
+.menu .home {
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    top: 10px;
+    left: 50%;
+    right: 50%;
+    /* transform: translate(-50%, -50%); */
+
+}
+
 .menu .novedades {
     bottom: 10px;
     left: 10px;
@@ -87,3 +97,8 @@ h1 {
 /* .menu a:hover {
     background-color: #555;
 } */
+
+
+/* MENU  */
+
+
