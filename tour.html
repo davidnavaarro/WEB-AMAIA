@@ -10,60 +10,80 @@
     <!-- GOOGLE FONTS | Montserrat y Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
     <!-- Link CSS   -->
-    <link rel="stylesheet" href="css/styles.css"></link>
+    <link rel="stylesheet" href="css/tour.css"></link>
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 <body>
 
+  <!-- MENÚ -->
+  <div class="menu">
+    <a href="merch.html" class="merch">MERCH</a>
+    <a href="tour.html" class="tour">TOUR</a>
+    <a href="#novedades" class="novedades">NOVEDADES</a>
+    <a href="#escucha" class="escucha">ESCUCHA</a>
+</div>
 
 
-    <div class="container">
-        <div class="row align-items-start">
-          <div class="col">
-            25 / 02 / 25
-          </div>
-          <div class="col">
-            MADRID
-          </div>
-          <div class="col">
-            WIZINK CENTER
-          </div>
-          <div class="col">
-            WIZINK CENTER
-          </div>
 
+  <div class="container-fluid mt-5">
+    <div class="row">
+        <!-- Columna Izquierda - Imagen -->
+        <div class="col-md-6">
+            <img src="media/img/amaia-tour.png" class="img-fluid" alt="Imagen de la Artista">
         </div>
-        <div class="row align-items-center">
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
+
+        <!-- Columna Derecha - Datos del Tour -->
+        <div class="col-md-6">
+            <div class="row">
+                <!-- Primer concierto en columna izquierda, fila 1 -->
+                <div class="col-6 mb-3">
+                    <h4>'si no abres los ojos no es real'</h4>
+                    <p>Sant Jordi Club (Barcelona)</p>
+                    <p>21/02/2025</p>
+                    <button class="btn btn-primary entradas">Entradas</button>
+                </div>
+                
+                <!-- Espacio vacío en columna derecha, fila 1 -->
+                <div class="col-6 mb-3"></div>
+
+                <!-- Espacio vacío en columna izquierda, fila 2 -->
+                <div class="col-6 mb-3"></div>
+
+                <!-- Segundo concierto en columna derecha, fila 2 -->
+                <div class="col-6 mb-3">
+                    <h4>'si no abres los ojos no es real'</h4>
+                    <p>Sant Jordi Club (Barcelona)</p>
+                    <p>22/02/2025</p>
+                    <button class="btn btn-primary entradas">Entradas</button>
+                </div>
+
+                <!-- Tercer concierto en columna izquierda, fila 3 -->
+                <div class="col-6 mb-3">
+                    <h4>'si no abres los ojos no es real'</h4>
+                    <p>WiZink Center (Madrid)</p>
+                    <p>22/02/2025</p>
+                    <button class="btn btn-primary entradas">Entradas</button>
+                </div>
+
+                <!-- Espacio vacío en columna derecha, fila 3 -->
+                <div class="col-6 mb-3"></div>
+            </div>
         </div>
-        <div class="row align-items-end">
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-          <div class="col">
-            One of three columns
-          </div>
-        </div>
-      </div>
+    </div>
+</div>
 
 
     <!-- JAVASCRIPT BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
     <!-- el texto que se redacta -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
