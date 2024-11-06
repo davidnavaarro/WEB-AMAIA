@@ -1,3 +1,15 @@
+.external-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.external-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+ 
  /* Estilos para el botón de suscripción */
  .btn-primary {
     position: fixed;
