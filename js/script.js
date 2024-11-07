@@ -86,16 +86,16 @@ $(document).ready(function() {
     });    
 });
 
+
 $(document).ready(function(){
     $('.slick-carousel').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         dots: true,
         arrows: true
     });
 });
 
-  
