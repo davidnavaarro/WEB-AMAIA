@@ -1,95 +1,58 @@
-/* Estilo general para el contenedor */
-.container {
-    max-width: 100%;
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
-/* Asegura que el carrusel esté centrado y las imágenes se ajusten bien */
-.carousel {
-    /* width: 90%; */
-    margin: 0 auto;
-    max-width: 100%;
+.container-fluid {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative; /* Necesario para el arrastre dentro del contenedor */
 }
 
+/* Estilo para la imagen flotante */
+.floating-img {
+    cursor: grab; /* Muestra el cursor de agarre */
+    transition: left 0.1s, top 0.1s; /* Suaviza el movimiento de la imagen */
+    width: 200px; /* Establece un tamaño fijo para la imagen flotante */
+    height: auto; /* Mantiene la relación de aspecto */
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    position: relative; /* Mantener la imagen en el flujo del contenedor */
+    z-index: 1;         /* Aseguramos que esté por encima de otros elementos */
+    transition: left 0.1s, top 0.1s; /* Para hacer que el movimiento sea suave */
 
-
-
-.carousel-item img {
-    cursor: grab;
 }
 
-
-.carousel-item {
-    position: relative;
-    text-align: center;
+/* Bordes redondeados para las imágenes */
+img.rounded {
+    border-radius: 10px;
 }
 
-/* Estilo para la imagen de la artista */
-.artist-image {
-    max-height: 100vh;
-    position: relative;
-}
-
-
-/* Estilo para los botones de navegación del carrusel */
-.carousel-control-prev,
-.carousel-control-next {
-    filter: brightness(0.8);
-    width: 5%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #000;
-    border-radius: 50%;
+/* Centrado de las imágenes dentro de las columnas */
+.col-md-4 {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center;     /* Centra las imágenes verticalmente */
     padding: 10px;
+    position: relative; /* Necesario para asegurar que la imagen se mueva dentro de esta columna */
 }
 
 
-
-
-/* Fondo para los textos del carrusel */
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    width: 90%;
-    margin: auto;
-    bottom: 10%;
-}
-
-/* Botones del carrusel */
-.carousel-caption button {
-    background-color: #ff3366;
-    border: none;
-    color: white;
-    padding: 8px 15px;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
+/* Estilo para la imagen en las columnas */
+.col-md-4 img {
+    max-width: 70%;   /* Limita el tamaño de la imagen */
+    height: auto;     /* Mantiene la relación de aspecto */
+    z-index: 1; /* Imagen de la columna 2 está debajo de las flotantes */
 }
 
 
-
-.draggable-product {
-    cursor: grab;
-    transition: all 0.2s ease; /* Suaviza el movimiento */
+.floating-img.moving {
+    position: absolute; /* Cambia a absoluto para permitir que se mueva libremente */
+    z-index: 10;        /* Hace que la imagen se ubique por encima de los otros elementos */
 }
 
-.carousel-item {
-    position: relative;
-}
-
-.carousel-caption h5, .carousel-caption p, .carousel-caption button {
-    display: block;
-    margin: 5px 0;
-}
-
-
-.draggable {
-    cursor: grab;
-}
-
-.draggable:active {
-    cursor: grabbing;
+.col-6 img {
+    width: 100%;
 }

@@ -1,62 +1,70 @@
+// Seleccionamos todas las imágenes flotantes
+const floatingImgs = document.querySelectorAll('.floating-img');
+let isDragging = false; // Bandera para saber si estamos arrastrando la imagen
+let offsetX = 0; // Diferencia entre el clic y la posición de la imagen
+let offsetY = 0; // Diferencia entre el clic y la posición de la imagen
+let draggedImg = null; // Variable para almacenar la imagen que estamos arrastrando
+
+floatingImgs.forEach((img) => {
+    // Evento que se dispara al hacer clic en la imagen (mousedown)
+    img.addEventListener('mousedown', (event) => {
+        isDragging = true; // Empezamos a arrastrar
+        draggedImg = img; // Guardamos la imagen que estamos arrastrando
+
+        // Hacer que la imagen se posicione de forma absoluta mientras se arrastra
+        draggedImg.style.position = 'absolute'; // Cambia la imagen a posicionamiento absoluto durante el arrastre
+        draggedImg.style.zIndex = '10'; // Aseguramos que esté sobre los otros elementos
+        draggedImg.classList.add('moving'); // Añadimos clase "moving" para aplicar el estilo
+
+        // Calculamos la diferencia (offset) entre la posición del mouse y la imagen
+        const rect = draggedImg.getBoundingClientRect();
+        offsetX = event.clientX - rect.left;
+        offsetY = event.clientY - rect.top;
+
+        draggedImg.style.cursor = 'grabbing'; // Cambia el cursor para indicar que se está arrastrando
+    });
+
+    // Evento para mover la imagen cuando arrastramos el ratón (mousemove)
+    document.addEventListener('mousemove', (event) => {
+        if (isDragging && draggedImg) {
+            // Calcular la nueva posición de la imagen
+            const xMove = event.clientX - offsetX;
+            const yMove = event.clientY - offsetY;
+
+            // Actualizar la posición de la imagen
+            draggedImg.style.left = `${xMove}px`;
+            draggedImg.style.top = `${yMove}px`;
+        }
+    });
+
+    // Evento para cuando se suelta el ratón (mouseup)
+    document.addEventListener('mouseup', () => {
+        if (isDragging && draggedImg) {
+            isDragging = false; // Dejamos de arrastrar
+            draggedImg.style.cursor = 'grab'; // Cambia el cursor a 'grab'
+
+            // Restaurar la posición dentro del layout
+            draggedImg.classList.remove('moving'); // Quitamos la clase "moving"
+            draggedImg.style.position = 'relative'; // La imagen vuelve a su lugar original
+            draggedImg.style.zIndex = '1'; // Restaura el z-index
+        }
+    });
+});
+
 // texto que se redacta 
 var typed = new Typed('#element-1', {
     strings: ['AMAIA'],
-    typeSpeed: 90,
+    typeSpeed: 80,
     loop: true,
     showCursor: false,
   });
 
   var typed = new Typed('#element-2', {
-    strings: ['NUEVO','ÁLBUM'],
-    typeSpeed: 90,
+    strings: ['NUEVO','ALBUM'],
+    typeSpeed: 80,
     loop: true,
     showCursor: false,
   });
-
-
-
-
-
-// Selecciona solo la imagen de la diapositiva activa
-function enableDragForActiveImage() {
-    const activeItem = document.querySelector('.carousel-item.active .draggable');
-    
-    if (activeItem) {
-        let isDragging = false;
-        let offsetX, offsetY;
-
-        // Evento de inicio de arrastre
-        activeItem.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            offsetX = e.clientX - activeItem.getBoundingClientRect().left;
-            offsetY = e.clientY - activeItem.getBoundingClientRect().top;
-            activeItem.style.position = 'absolute';
-            activeItem.style.zIndex = '10'; // Asegura que esté por encima de otros elementos
-        });
-
-        // Evento de arrastre
-        document.addEventListener('mousemove', (e) => {
-            if (isDragging) {
-                activeItem.style.left = `${e.clientX - offsetX}px`;
-                activeItem.style.top = `${e.clientY - offsetY}px`;
-            }
-        });
-
-        // Evento de fin de arrastre
-        document.addEventListener('mouseup', () => {
-            isDragging = false;
-        });
-    }
-}
-
-// Llama a la función cuando el carrusel cambia de diapositiva
-document.getElementById('productCarousel').addEventListener('slid.bs.carousel', enableDragForActiveImage);
-
-// Habilita el arrastre para la primera imagen al cargar la página
-enableDragForActiveImage();
-
-
-
 
 
 $(document).ready(function() {
@@ -80,4 +88,3 @@ $(document).ready(function() {
 
 
 
-  
