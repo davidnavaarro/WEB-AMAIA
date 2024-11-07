@@ -84,8 +84,18 @@ $(document).ready(function() {
             alert("Por favor, ingresa un correo electrónico válido.");
         }    
     });    
-});    
+});
 
-
+$(document).ready(function(){
+    $('.slick-carousel').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        arrows: true
+    });
+});
 
   
