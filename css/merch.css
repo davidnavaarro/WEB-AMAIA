@@ -42,7 +42,7 @@ img.rounded {
 
 /* Estilo para la imagen en las columnas */
 .col-md-4 img {
-    max-width: 70%;   /* Limita el tamaño de la imagen */
+    max-width: 100%;   /* Limita el tamaño de la imagen */
     height: auto;     /* Mantiene la relación de aspecto */
     z-index: 1; /* Imagen de la columna 2 está debajo de las flotantes */
 }
@@ -56,3 +56,18 @@ img.rounded {
 .col-6 img {
     width: 100%;
 }
+
+.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center img {
+    max-width: 70% !important;
+    z-index: -10;
+}
+
+
