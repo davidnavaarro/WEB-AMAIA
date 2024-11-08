@@ -42,11 +42,11 @@ body {
     width: 100%;
 }
 #element-1, #element-2 {
-    z-index: 1; /* Asegura que el título esté por encima del video */
-    position: relative; /* Necesario para que el z-index funcione */
+    z-index: 1; 
+    position: relative; 
     font-size: 3em;
-    color: #1009e5; /* Cambia el color del texto para mejorar la visibilidad */
-    text-align: center; /* Centra el texto */
+    color: #1009e5; 
+    text-align: center; 
     font-weight: 500;
 }
 

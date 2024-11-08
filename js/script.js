@@ -66,25 +66,15 @@ var typed = new Typed('#element-1', {
     showCursor: false,
   });
 
+  document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Previene el envío del formulario
+    const email = document.getElementById('emailInput').value;
 
-$(document).ready(function() {
-    // Abre el modal automáticamente después de 2 segundos
-    setTimeout(function() {
-        $('#newsletterModal').modal('show');
-    }, 2000);    
-
-    // Simulación de suscripción
-    $('#subscribeForm').on('submit', function(event) {
-        event.preventDefault(); 
-        const email = $('#emailInput').val().trim(); 
-        if (email) {
-            alert(`Gracias por suscribirte con el correo: ${email}`);
-            $('#newsletterModal').modal('hide'); 
-        } else {
-            alert("Por favor, ingresa un correo electrónico válido.");
-        }    
-    });    
-});    
-
-
+    if (email) {
+        alert(`Gracias por suscribirte! Pronto recibirás novedades en ${email}`);
+        document.getElementById('subscriptionForm').reset();
+        var modal = bootstrap.Modal.getInstance(document.getElementById('subscribeModal'));
+        modal.hide(); // Cierra la ventana modal
+    }
+});
 
