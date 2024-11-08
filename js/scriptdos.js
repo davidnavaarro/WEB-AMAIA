@@ -22,37 +22,39 @@ $('#subscribeForm').on('submit', function(event) {
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Función para controlar el cambio de diapositivas con botones "prev" y "next"
+// Función para controlar el siguiente/anterior
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Función para cambiar a una diapositiva específica al hacer clic en un punto
+// Función para mostrar una diapositiva específica
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-// Función principal para mostrar la diapositiva actual
+// Función principal para mostrar las diapositivas
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
 
-  // Si el índice es mayor que el número total de diapositivas, vuelve al inicio
-  if (n > slides.length) { slideIndex = 1; }
-  // Si el índice es menor que 1, muestra la última diapositiva
-  if (n < 1) { slideIndex = slides.length; }
-
-  // Oculta todas las diapositivas y quita la clase "active" de todos los puntos
-  for (i = 0; i < slides.length; i++) {
+  if (n > slides.length) { 
+    slideIndex = 1; 
+  }
+  if (n < 1) { 
+    slideIndex = slides.length; 
+  }
+  
+  // Oculta todas las diapositivas
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
+  
+  // Remueve la clase "active" de todos los puntos
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-
-  // Muestra la diapositiva actual y añade la clase "active" al punto correspondiente
+  
+  // Muestra la diapositiva actual y activa el punto correspondiente
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-

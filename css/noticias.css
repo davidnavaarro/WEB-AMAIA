@@ -81,84 +81,80 @@ img {
   to {opacity: 1}
   }
 
-        /* Estilos para el botón de suscripción */
-        .btn-primary {
-            font-family: 'Montserrat', sans-serif;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #1009e5; 
-            color: white;
-            border: none;
-            border-radius: 200px;
-            padding: 12px 20px;
-            font-size: 16px;
-            font-weight: 500;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #050180;
-        }
-
-        /* Estilos para el modal */
-        .modal-content {
-            border-radius: 8px;
-            border: none;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-        .modal-header {
-            border-bottom: none;
-            text-align: center;
-            padding-bottom: 0;
-        }
-        .modal-title {
-            font-size: 24px;
-            font-weight: 600;
-            color: #333;
-        }
-        .modal-body {
-            padding-top: 0;
-            color: #555;
-        }
-        .modal-body p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            font-size: 14px;
-            color: #888;
-        }
-        .form-control {
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            box-shadow: none;
-            padding: 10px;
-            font-size: 15px;
-        }
-        .form-control:focus {
-            border-color: #4CAF50;
-            box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
-        }
-        .btn-success {
-            background-color: #4CAF50;
-            border: none;
-            width: 100%;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: 500;
-            padding: 10px;
-        }
-        .btn-success:hover {
-            background-color: #388e3c;
-        }
-        .close {
-            font-size: 24px;
-            color: #bbb;
-            transition: color 0.2s;
-        }
-        .close:hover {
-            color: #333;
-        }
+/* Contenedor principal */
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Ocultar las diapositivas por defecto */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Estilos para las imágenes */
+  .mySlides img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Estilo para los botones de siguiente y anterior */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Posición de los botones */
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  /* Efecto de hover en los botones */
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Estilos para los puntos */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Efecto de fade para las transiciones */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from { opacity: .4; } 
+    to { opacity: 1; }
+  }
+  
