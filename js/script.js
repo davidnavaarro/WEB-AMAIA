@@ -99,22 +99,23 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+  loop; false;
 }
 
 // texto que se redacta 
 var typed = new Typed('#element-1', {
-    strings: ['AMAIA'],
-    typeSpeed: 80,
-    loop: true,
-    showCursor: false,
-  });
+  strings: ['AMAIA'],
+  typeSpeed: 80,
+  loop: true,
+  showCursor: false,
+});
 
-  var typed = new Typed('#element-2', {
-    strings: ['NUEVO','ALBUM'],
-    typeSpeed: 80,
-    loop: true,
-    showCursor: false,
-  });
+var typed = new Typed('#element-2', {
+  strings: ['NUEVO','ALBUM'],
+  typeSpeed: 80,
+  loop: true,
+  showCursor: false,
+});
 
   document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Previene el envío del formulario

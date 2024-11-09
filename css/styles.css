@@ -76,12 +76,15 @@ body {
 .menu .home {
     font-size: 2em;
     font-family: 'Times New Roman', Times, serif;
-    top: 10px;
-    left: 50%;
-    right: 50%;
-    /* transform: translate(-50%, -50%); */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 5px;
+    font-size: 25px;
+    z-index: 10;
 
 }
+
 
 .menu .novedades {
     bottom: 10px;
