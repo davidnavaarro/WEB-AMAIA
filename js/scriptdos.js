@@ -1,9 +1,4 @@
-  // Abre el modal automáticamente después de 2 segundos
-  $(document).ready(function(){
-    setTimeout(function(){
-        $('#newsletterModal').modal('show');
-    }, 2000); // Puedes ajustar el tiempo de apertura aquí (en milisegundos)
-});
+
 
 // Simulación de suscripción
 $('#subscribeForm').on('submit', function(event) {
@@ -17,44 +12,33 @@ $('#subscribeForm').on('submit', function(event) {
     }
 });
 
-// SLIDESHOW
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Función para controlar el siguiente/anterior
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Función para mostrar una diapositiva específica
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-// Función principal para mostrar las diapositivas
-function showSlides(n) {
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) { 
-    slideIndex = 1; 
-  }
-  if (n < 1) { 
-    slideIndex = slides.length; 
-  }
-  
-  // Oculta todas las diapositivas
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  
-  // Remueve la clase "active" de todos los puntos
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  
-  // Muestra la diapositiva actual y activa el punto correspondiente
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
+$(document).ready(function(){
+  $('.your-class').slick({
+      infinite: true,          // Carrusel en bucle infinito
+      slidesToShow: 1,         // Mostrar 1 imagen a la vez
+      slidesToScroll: 1,       // Desplazar 1 imagen a la vez
+      autoplay: false,         // Desactivar el autoplay (si lo deseas puedes activarlo)
+      autoplaySpeed: 2000,     // Velocidad del autoplay (en milisegundos) (opcional si autoplay está activado)
+      arrows: true,            // Mostrar los botones de siguiente y anterior
+      prevArrow: $('.prev-slide'),  // Usar el botón personalizado "Anterior"
+      nextArrow: $('.next-slide'),  // Usar el botón personalizado "Siguiente"
+      dots: false,             // No mostrar los puntos de navegación
+      fade: false,             // Desactivar el efecto de desvanecimiento (opcional)
+      responsive: [
+          {
+              breakpoint: 768,  // Ajuste para pantallas pequeñas
+              settings: {
+                  slidesToShow: 1,    // En pantallas pequeñas mostrar 1 imagen
+                  slidesToScroll: 1   // Desplazar 1 imagen a la vez
+              }
+          },
+          {
+              breakpoint: 1024,  // Ajuste para pantallas medianas
+              settings: {
+                  slidesToShow: 1,    // Mostrar 1 imagen a la vez en pantallas medianas
+                  slidesToScroll: 1   // Desplazar 1 imagen a la vez
+              }
+          }
+      ]
+  });
+});

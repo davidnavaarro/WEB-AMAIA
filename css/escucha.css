@@ -1,5 +1,4 @@
 body {
-    font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     color: #1009e5;
     height: 100vh;
@@ -10,7 +9,6 @@ body {
     position: relative;
 }
 
-/* Estilos de la card */
 .card {
     width: 300px;
     height: 300px;
@@ -18,14 +16,13 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     padding: 20px;
-    margin-right: 40px; /* Añade separación de 40px en el lado derecho */
+    margin-right: 40px; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Texto dentro de la card */
 .card h2 {
     flex-direction: column;
     justify-content: center;
@@ -37,18 +34,20 @@ body {
 .card p {
     font-size: 16px;
     color: white;
+    padding: 5px 0 5px 0;
+
 }
 
 .social-icons {
     display: flex;
-    flex-direction: column; /* Columna */
+    flex-direction: column; 
     gap: 15px;
-    position: fixed; /* Fijo en la pantalla */
-    top: 50%; /* Centro vertical */
-    left: 20px; /* Posición a la izquierda */
-    transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+    position: fixed; 
+    top: 50%; 
+    left: 20px; 
+    transform: translateY(-50%); 
 }
-/* Estilo de los íconos */
+
 .social-icon {
     color: #fff;
     background-color: #1009e5;
@@ -63,11 +62,38 @@ body {
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
 }
-/* Colores personalizados para cada ícono */
+
 .social-icon.instagram:hover { background-color: #e4405f; }
 .social-icon.tiktok:hover { background-color: #000000; }
 .social-icon.youtube:hover { background-color: #FF0000; }
-/* Efecto hover */
+
 .social-icon:hover {
     transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 50px 0 0 0;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 0; 
+        left: 0; 
+        transform: translateY(-0%);
+    }
+
+    #spotify {
+        margin: 20px 0 20px 0;
+    }
+
+
 }

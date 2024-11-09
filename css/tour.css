@@ -1,21 +1,18 @@
-/* Archivo styles.css */
-
-/* Desactivar el scroll en la página */
 html, body {
-    overflow: hidden;           /* Evita el scroll en ambas direcciones */
-    height: 100%;               /* Asegura que ocupe toda la pantalla */
+    height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
-/* Hacer que el contenedor ocupe el 80% del ancho de la pantalla y centrarlo */
+
 .container-fluid {
     display: flex;
-    align-items: center;       /* Centra verticalmente */
-    justify-content: center;    /* Centra horizontalmente */
-    min-height: 100vh;          /* Ocupa toda la altura de la pantalla */
-    width: 100%;                 /* Ancho del 80% de la pantalla */
-    margin: 0 auto !important;             /* Centra horizontalmente el contenedor */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .mt-5 {
@@ -23,80 +20,82 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 100%;
+    width: 100%;
+    min-height: 100vh;
 }
 
-
-/* Estilo de las columnas */
 .col-md-6 img {
-    max-width: 100%;            /* La imagen ocupará el ancho disponible */
-    height: auto;               /* Mantiene la relación de aspecto */
-    margin-bottom: 20px;        /* Espacio debajo de la imagen */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .col-md-6 {
     display: flex;
 }
 
-/* Tamaño de los textos y espaciado */
 .col-6 h4 {
     font-weight: bold;
     color: #333;
-    font-size: 1.5rem;          /* Aumenta el tamaño del título */
-    text-align: center;         /* Centra el texto del título */
+    font-size: 1.5rem;
+    text-align: center;
     font-family: "DM Serif Display", serif;
     font-weight: 400;
     font-style: italic;
 }
 
-
 .col-6 p {
     color: #666;
-    font-size: 1.2rem;          /* Aumenta el tamaño del texto */
-    margin-bottom: 5px;         /* Espaciado inferior para separar */
-    text-align: center;         /* Centra el texto de los párrafos */
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
-/* Tamaño del botón */
 .col-6 button {
     margin-top: 10px;
-    padding: 10px 20px;         /* Aumenta el tamaño del botón */
-    font-size: 1.1rem;          /* Aumenta la fuente del botón */
+    padding: 10px 20px;
+    font-size: 1.1rem;
 }
 
-/* Centra el contenido de cada columna */
 .col-6 {
     display: flex;
-    flex-direction: column;     /* Para alinear el texto y el botón */
-    align-items: center;        /* Centra horizontalmente los elementos */
+    flex-direction: column;
+    align-items: center;
 }
 
-
-/* Estilo del botón Entradas */
 button.entradas {
-    padding: 10px 20px;               /* Tamaño del botón */
-    font-size: 1em;                /* Tamaño de la fuente */
-    font-weight: bold;                /* Negrita */
-    text-transform: uppercase;        /* Texto en mayúsculas */
-    background-color: white;         /* Fondo blanco */
-    border: 2px solid #1009e5;       /* Borde de color azul eléctrico */
-    border-radius: 5px;              /* Bordes redondeados */
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: white;
+    border: 2px solid #1009e5;
+    border-radius: 5px;
     color: #1009e5;
-    cursor: pointer;                 /* Cambia el cursor al pasar por encima */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
-    outline: none;                   /* Elimina el borde de enfoque */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    outline: none;
 }
 
-/* Efecto al pasar el ratón (hover) */
 button.entradas:hover {
     background-color: #1009e5;
-    color: white;                    /* Texto blanco */
+    color: white;
 }
 
-/* Efecto al hacer clic (active) */
 button.entradas:active {
-    background-color: #000000;       /* Fondo negro */
-    color: white;                    /* Texto blanco */
+    background-color: #000000;
+    color: white;
 }
 
+@media (max-width: 767px) {
+    .col-6.mb-3:nth-child(2),
+    .col-6.mb-3:nth-child(3),
+    .col-6.mb-3:nth-child(6) {
+        display: none;
+    }
+
+    .col-6 {
+        width: 100%;
+    }
+}

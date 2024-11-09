@@ -7,15 +7,13 @@
     <link rel="icon" href="media/img/favicon.png" type="image/x-icon">
     
     <!-- GOOGLE FONTS | Montserrat y Playfair Display -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+       <!-- GOOGLE FONTS-->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     
     <!-- Link CSS   -->
-    <!--     <link rel="stylesheet" href="css/styles.css"></link> -->
+    <link rel="stylesheet" href="css/styles.css"></link>
     <link rel="stylesheet" href="css/escucha.css"></link>
     
     <!-- Link icono -->
@@ -23,12 +21,25 @@
 </head>
 <body>
 
-    <div class="menu">
+    <!-- MENÚ -->
+    <div class="menu-desktop">
         <a href="merch.html" class="merch">MERCH</a>
         <a href="tour.html" class="tour">TOUR</a>
         <a href="index.html" class="home">Amaia</a>
         <a href="noticias.html" class="novedades">NOVEDADES</a>
         <a href="escucha.html" class="escucha">ESCUCHA</a>
+    </div>
+
+    <div class="menu-mobile">
+        <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+
+        <div class="menu-links" id="mobileMenuLinks">
+            <a href="index.html">HOME</a>
+            <a href="merch.html">MERCH</a>
+            <a href="tour.html">TOUR</a>
+            <a href="noticias.html">NOVEDADES</a>
+            <a href="escucha.html">ESCUCHA</a>
+        </div>
     </div>
 
      <!-- Card con contenido -->
@@ -67,6 +78,7 @@
 
    
     <!-- Link JS -->
+     <script src="js/script.js"></script>
     <script src="js/scriptdos.js"></script>
 </body>
 </html>
